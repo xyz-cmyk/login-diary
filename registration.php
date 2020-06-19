@@ -1,13 +1,17 @@
+<?php include('server.php');
+
+?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
-<title>Login page</title>
+<title>Registration page</title>
 </head>
 <body>
   <div class="header">
     <h2>Register Now</h2>
    </div>
    <form method="post" action="registration.php">
+    <?php include('errors.php'); ?>
     <div class="input">
     <label>Username</label>
     <input type="text" name="username">
