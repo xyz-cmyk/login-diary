@@ -6,7 +6,7 @@ $errors = array();
 
 
 $db = mysqli_connect('localhost', 'root', '', 'diary');//here diary is my database name
-if(isset($_POST['registration'])){
+if(isset($_POST['register'])){
     $username=mysql_real_escape_string($_POST['username']);
     $email=mysql_real_escape_string($_POST['email']);
     $password=mysql_real_escape_string($_POST['password']);
@@ -22,7 +22,7 @@ if(isset($_POST['registration'])){
     }
     if (count($errors)==0){ //if no error found, save to database
         $password = md5($password);
-        $sql = "INSERT INTO user(username, email, password) 
+        $sql = "INSERT INTO user (username, email, password) 
                    VALUES ('$username', '$email', '$password')";
     
         mysqli_query($db, $sql);
