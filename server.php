@@ -5,7 +5,7 @@ $password="";
 $errors = array();
 
 
-$db=mysqli_connect('localhost', 'root', '', 'diary');//here diary is my database name
+$db = mysqli_connect('localhost', 'root', '', 'diary');//here diary is my database name
 if(isset($_POST['registration'])){
     $username=mysql_real_escape_string($_POST['username']);
     $email=mysql_real_escape_string($_POST['email']);
