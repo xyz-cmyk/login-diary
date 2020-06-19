@@ -1,6 +1,7 @@
 <?php
 $username = "";
 $email = "";
+$password="";
 $errors = array();
 
 
@@ -19,7 +20,7 @@ if(isset($_POST['registration'])){
     if (empty($password)){
                 array_push($errors, "Password is required");
     }
-    if (count($errors)==0){
+    if (count($errors)==0){ //if no error found, save to database
         $password = md5($password);
         $sql = "INSERT INTO user(username, email, password) 
                    VALUES ('$username', '$email', '$password')";
