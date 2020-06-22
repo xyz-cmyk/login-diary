@@ -1,4 +1,5 @@
 <?php
+session_start();
 $username = "";
 $email = "";
 $password="";
@@ -26,7 +27,18 @@ if(isset($_POST['register'])){
                    VALUES ('$username', '$email', '$password')";
     
         mysqli_query($db, $sql);
+        $_SESSION['username'] = $username;
+        $_SESSION['success'] = "You are now login";
+        header('location: index.php');
    }
 
+}
+if (isset($_POST['login'])){
+     
+}   
+if (isset($_GET['logout'])){
+     session_destroy();
+     unset($_SESSION['username']);
+     header('location: login.php');
 }
 ?>

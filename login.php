@@ -1,3 +1,4 @@
+<?php include('server.php'); ?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -5,9 +6,10 @@
 </head>
 <body>
   <div class="header">
-    <h2>Login</h2>
+    <h2>Login Now</h2>
    </div>
    <form method="post" action="login.php">
+   <?php include('errors.php'); ?>
     <div class="input">
     <label>Username</label>
     <input type="text" name="username">

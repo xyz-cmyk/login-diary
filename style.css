@@ -17,8 +17,9 @@ body{
     border-bottom: none;
     border-radius: 10px 10px 0px 0px;
     padding: 20px;
+
 }
-form{
+form, .content{
     width: 30%;
     margin: 0px auto;
     padding: 20px;
@@ -50,4 +51,20 @@ form{
     background:#11c4ca;
     border:none;
     border-radius: 5px;
+}
+.error{
+    width: 92%;
+    margin: 0px auto;
+    padding: 10px;
+    border: 1px solid #a94442;
+    color: #a94444;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align-left: left;
+}
+.success {
+    color: #3c763d;
+    background: #dff0db;
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
 }
