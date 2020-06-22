@@ -60,7 +60,7 @@ form, .content{
     color: #a94444;
     background: #f2dede;
     border-radius: 5px;
-    text-align-left: left;
+    text-align: left;
 }
 .success {
     color: #3c763d;
